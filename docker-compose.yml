@@ -1,0 +1,14 @@
+services:
+  bookstore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      PORT: 8081
+      H2_CONSOLE_ENABLED: "true"
+      DB_URL: jdbc:h2:mem:bookstore
+      DB_DRIVER_CLASS_NAME: org.h2.Driver
+      DB_USERNAME: crni99
+      DB_PASSWORD: og

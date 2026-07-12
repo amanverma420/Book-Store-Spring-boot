@@ -107,10 +107,23 @@ cd online-book-store
 mvn spring-boot:run
 ```
 
+### Deploy with Docker (easiest)
+
+```bash
+docker build -t bookstore:latest .
+docker run -p 8081:8081 -e PORT=8081 bookstore:latest
+```
+
+Or with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
 ### Access Application
 
 ```text
-http://localhost:8080
+http://localhost:8081
 ```
 
 
