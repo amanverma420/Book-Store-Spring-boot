@@ -1,5 +1,7 @@
 # 📚 Online Book Store - Spring Boot Project
 
+🔗 **Live Demo**: [https://bookstore-app-zmqw.onrender.com/](https://bookstore-app-zmqw.onrender.com/)
+
 ## 📖 Overview
 
 The **Online Book Store** is a web-based application developed using **Spring Boot** that enables users to browse, search, and purchase books online. The platform provides a seamless shopping experience with features such as book catalog browsing, shopping cart management, secure checkout, and order tracking.
@@ -122,9 +124,8 @@ docker compose up --build
 
 ### Access Application
 
-```text
-http://localhost:8081
-```
+- **Local Development**: [http://localhost:8081](http://localhost:8081)
+- **Live Demo**: [https://bookstore-app-zmqw.onrender.com/](https://bookstore-app-zmqw.onrender.com/)
 
 
 
