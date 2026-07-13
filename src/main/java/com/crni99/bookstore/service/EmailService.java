@@ -14,11 +14,15 @@ public class EmailService {
 	}
 
 	public void sendEmail(String to, String subject, String message) {
-		SimpleMailMessage mailMessage = new SimpleMailMessage();
-		mailMessage.setTo(to);
-		mailMessage.setSubject(subject);
-		mailMessage.setText(message);
-		mailSender.send(mailMessage);
+		try {
+			SimpleMailMessage mailMessage = new SimpleMailMessage();
+			mailMessage.setTo(to);
+			mailMessage.setSubject(subject);
+			mailMessage.setText(message);
+			mailSender.send(mailMessage);
+		} catch (Exception e) {
+			System.err.println("Failed to send email to " + to + ": " + e.getMessage());
+		}
 	}
 
 }

@@ -52,7 +52,7 @@ public class CheckoutController {
 			return "/checkout";
 		}
 		billingService.createOrder(customer, shoppingCartService.getCart());
-		//emailService.sendEmail(customer.getEmail(), "bookstore - Order Confirmation", "Your order has been confirmed.");
+		emailService.sendEmail(customer.getEmail(), "bookstore - Order Confirmation", "Your order has been confirmed.");
 		shoppingCartService.emptyCart();
 		redirect.addFlashAttribute("successMessage", "The order is confirmed, check your email.");
 		return "redirect:/cart";
